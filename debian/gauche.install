@@ -3,7 +3,6 @@
 /usr/lib/gauche-0.9/[0-9]*/*-*/binary--io.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/crypt--bcrypt.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/file--util.so
-/usr/lib/gauche-0.9/[0-9]*/*-*/gauche--auxsys.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/gauche--charconv.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/gauche--collection.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/gauche--fcntl.so
@@ -52,7 +51,6 @@
 /usr/share/gauche-0.9/[0-9]*/lib/file/util.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche-init.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/array.scm
-/usr/share/gauche-0.9/[0-9]*/lib/gauche/auxsys.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen/cise.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen/literal.scm
