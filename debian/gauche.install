@@ -58,6 +58,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen/stub.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen/type.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen/unit.scm
+/usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen/tmodule.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/charconv.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/collection.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/common-macros.scm
@@ -113,6 +114,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/sortutil.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/stringutil.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/syslog.scm
+/usr/share/gauche-0.9/[0-9]*/lib/gauche/sysutil.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/termios.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/test.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/threads.scm
