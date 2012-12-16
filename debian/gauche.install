@@ -74,6 +74,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/fileutil.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/hashutil.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/hook.scm
+/usr/share/gauche-0.9/[0-9]*/lib/gauche/generator.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/interactive.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/interactive/info.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/interpolate.scm
@@ -82,6 +83,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/listener.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/logger.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/logical.scm
+/usr/share/gauche-0.9/[0-9]*/lib/gauche/lazy.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/macroutil.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/matrix.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/modutil.scm
