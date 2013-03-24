@@ -22,6 +22,7 @@
 /usr/lib/gauche-0.9/[0-9]*/*-*/parser--peg.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/rfc--md5.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/rfc--sha.so
+/usr/lib/gauche-0.9/[0-9]*/*-*/rfc--tls.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/srfi-1.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/srfi-13.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/srfi-19.so
@@ -146,6 +147,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/rfc/quoted-printable.scm
 /usr/share/gauche-0.9/[0-9]*/lib/rfc/sha.scm
 /usr/share/gauche-0.9/[0-9]*/lib/rfc/sha1.scm
+/usr/share/gauche-0.9/[0-9]*/lib/rfc/tls.scm
 /usr/share/gauche-0.9/[0-9]*/lib/rfc/uri.scm
 /usr/share/gauche-0.9/[0-9]*/lib/slib.scm
 /usr/share/gauche-0.9/[0-9]*/lib/slibcat
