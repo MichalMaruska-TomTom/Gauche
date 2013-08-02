@@ -51,7 +51,6 @@
 /usr/share/gauche-0.9/[0-9]*/lib/dbi.scm
 /usr/share/gauche-0.9/[0-9]*/lib/file/filter.scm
 /usr/share/gauche-0.9/[0-9]*/lib/file/util.scm
-/usr/share/gauche-0.9/[0-9]*/lib/gauche-init.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/*.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/cgen/cise.scm
