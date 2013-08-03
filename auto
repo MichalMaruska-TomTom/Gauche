@@ -1,1 +1,12 @@
+#!/bin/bash
+
+# todo: get it from the configure.ac
+# AC_INIT(Gauche, 0.9.4_pre3, shiro@acm.org)
+#$(gauche-config -V|sed -e 's/_/-/');
+GAUCHE_VERSION=0.9.4-pre3
+
+cat debian/control.in | sed -e "s/@GAUCHE_VERSION@/${GAUCHE_VERSION}/g" >debian/control
+
+
+
 ./DIST gen
