@@ -1,0 +1,97 @@
+Source: gauche
+Section: lisp
+Priority: optional
+Maintainer: Debian Gauche Maintainers <pkg-gauche-devel@lists.alioth.debian.org>
+Uploaders: Hatta Shuzo <hattas@debian.org>, YAEGASHI Takeshi <yaegashi@debian.org>, NIIBE Yutaka <gniibe@fsij.org>, Jens Thiele <karme@karme.de>
+Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7.0.50~), autotools-dev, texinfo, libgdbm-dev, autoconf, slib (>> 3a5), zlib1g-dev, libatomic-ops-dev, netbase
+Standards-Version: 3.8.4
+Homepage: http://practical-scheme.net/gauche/
+
+Package: gauche-@GAUCHE_VERSION@
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: wiliki (<< 0.5.1)
+Breaks: gauche-dev (<= 0.9-11)
+Replaces: gauche-dev (<= 0.9-11)
+Provides: gauche
+Recommends: slib
+Suggests: r5rs-doc, gauche-doc, gauche-zlib, gauche-gdbm
+Description: A Scheme implementation designed for script writing
+ Gauche is a Scheme implementation developed to be a handy script
+ interpreter, which allows programmers and system administrators to
+ write small to large scripts for their daily chores. Quick startup,
+ built-in system interface, native multilingual support are some of
+ the author's goals.
+
+Package: libgauche0-@GAUCHE_VERSION@
+Section: libs
+Architecture: any
+Provides: libgauche0
+Breaks: gauche (<= 0.9-11)
+Replaces: gauche (<= 0.9-11)
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgauche0
+Description: Gauche runtime shared library
+ Gauche is a Scheme implementation developed to be a handy script
+ interpreter.
+ .
+ This package contains Gauche runtime shared library.
+
+Package: gauche-@GAUCHE_VERSION@-gdbm
+Architecture: any
+Provides: gauche-gdbm
+Depends: gauche-@GAUCHE_VERSION@ (>= 0.9-15), ${shlibs:Depends}, ${misc:Depends}
+Description: gdbm binding for Gauche
+ Gauche is a Scheme implementation developed to be a handy script
+ interpreter, which allows programmers and system administrators to
+ write small to large scripts for their daily chores. Quick startup,
+ built-in system interface, native multilingual support are some of
+ the author's goals.
+ .
+ This package contains GDBM binding modules for Gauche.
+
+Package: gauche-@GAUCHE_VERSION@-zlib
+Architecture: any
+Depends: gauche-@GAUCHE_VERSION@ (>= 0.9-15), ${shlibs:Depends}, ${misc:Depends}
+Breaks: gauche (<= 0.9-11), gauche-dev (<= 0.9-11)
+Replaces: gauche (<= 0.9-11)
+Provides: gauche-zlib
+Description: zlib binding for Gauche
+ Gauche is a Scheme implementation developed to be a handy script
+ interpreter, which allows programmers and system administrators to
+ write small to large scripts for their daily chores. Quick startup,
+ built-in system interface, native multilingual support are some of
+ the author's goals.
+ .
+ This package contains zlib binding modules for Gauche.
+
+Package: gauche-@GAUCHE_VERSION@-dev
+Section: lisp
+Architecture: any
+Depends: gauche-@GAUCHE_VERSION@, ${shlibs:Depends}, ${misc:Depends}
+Breaks: gauche (<= 0.9-11)
+Replaces: gauche (<= 0.9-11)
+Provides: gauche-dev
+Description: Development files for Gauche
+ Gauche is a Scheme implementation developed to be a handy script
+ interpreter, which allows programmers and system administrators to
+ write small to large scripts for their daily chores. Quick startup,
+ built-in system interface, native multilingual support are some of
+ the author's goals.
+ .
+ This package contains development files of Gauche.
+
+Package: gauche-@GAUCHE_VERSION@-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Provides: gauche-doc
+Description: Reference manual of Gauche
+ Gauche is a Scheme implementation developed to be a handy script
+ interpreter, which allows programmers and system administrators to
+ write small to large scripts for their daily chores. Quick startup,
+ built-in system interface, native multilingual support are some of
+ the author's goals.
+ .
+ This package contains info documents of the reference manual of Gauche
+ (English, Japanese).
