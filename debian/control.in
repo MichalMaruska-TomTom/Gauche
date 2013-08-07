@@ -9,7 +9,7 @@ Homepage: http://practical-scheme.net/gauche/
 
 Package: gauche-@GAUCHE_VERSION@
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgauche0-@GAUCHE_VERSION@
 Conflicts: wiliki (<< 0.5.1), gauche (<< 0.9.4~pre3maruska1)
 Breaks: gauche-dev (<= 0.9-11)
 Replaces: gauche-dev (<= 0.9-11)
@@ -30,7 +30,6 @@ Provides: libgauche0
 Breaks: gauche (<= 0.9-11)
 Replaces: gauche (<= 0.9-11)
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Provides: libgauche0
 Description: Gauche runtime shared library
  Gauche is a Scheme implementation developed to be a handy script
  interpreter.
