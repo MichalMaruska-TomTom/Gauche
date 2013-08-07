@@ -1,18 +1,18 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
+debian/control:
+	# fix the Package name
+	./replace-pg-gauche-string  debian/control.in > $@
 
+%:
+	dh $@
 
-# Add here any variable or target overrides you need.
-
-
-gauche/clean:
+override_dh_auto_clean:
 	dh_auto_clean
 	rm -f configure config.sub config.guess
 	rm -f lib/gauche/config.scm
 
-gauche/configure:
+override_dh_auto_configure:
 	ln -sf /usr/share/misc/config.sub .
 	ln -sf /usr/share/misc/config.guess .
 	autoconf
@@ -20,14 +20,19 @@ gauche/configure:
 	dh_auto_configure -- --enable-multibyte=utf-8 --enable-ipv6 --enable-threads=pthreads --with-slib=/usr/share/slib
 
 
-gauche/build:
+
+override_dh_build:
 ifeq ($(less_optimization_for_vm_compilation),yes)
 	(cd src; make CFLAGS="-g -O1 -fPIC" vm.o)
 endif
 	dh_auto_build
 
 
+DEB_DH_INSTALL_SOURCEDIR :=  debian/tmp
 
-gauche/install:
+# pre-install
+override_dh_install:
 	make DESTDIR=$(CURDIR)/debian/tmp slibcat-in-place install-pkg install-doc
-	chmod +x $(CURDIR)/debian/tmp/usr/share/gauche/0.9/template.DIST
+	dh_install --fail-missing
+
+#	chmod +x $(CURDIR)/debian/tmp/usr/share/gauche/0.9/template.DIST
