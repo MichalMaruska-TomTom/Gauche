@@ -1,6 +1,5 @@
 /usr/bin/gauche-cesconv
 /usr/bin/gosh
-/usr/lib/libgauche-0.9.so.*0.4
 /usr/lib/gauche-0.9/[0-9]*/*-*/binary--io.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/crypt--bcrypt.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/file--util.so
@@ -34,6 +33,7 @@
 /usr/lib/gauche-0.9/[0-9]*/*-*/sxml--tools.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/text--gettext.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/text--tr.so
+/usr/lib/gauche-0.9/[0-9]*/*-*/text--unicode.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/util--match.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/util--queue.so
 /usr/lib/gauche-0.9/[0-9]*/*-*/util--sparse.so

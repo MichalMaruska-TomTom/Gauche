@@ -12,5 +12,6 @@ do
     mv -v debian/$pkg.install  debian/gauche-${GAUCHE_VERSION}${pkg#gauche}.install
 done
 
+mv -v debian/libgauche0.install  debian/libgauche0-${GAUCHE_VERSION}.install
 
 ./DIST gen
