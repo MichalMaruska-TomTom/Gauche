@@ -9,9 +9,11 @@ cat debian/control.in | sed -e "s/@GAUCHE_VERSION@/${GAUCHE_VERSION}/g" >debian/
 
 for pkg in gauche-dev gauche-doc gauche-gdbm gauche-zlib gauche;
 do
+    # note that we remove "gauche" from 2 different templates:  gauche and gauche-xxx
     mv -v debian/$pkg.install  debian/gauche-${GAUCHE_VERSION}${pkg#gauche}.install
 done
 
+# still needed?
 mv -v debian/libgauche0.install  debian/libgauche0-${GAUCHE_VERSION}.install
 
 ./DIST gen
