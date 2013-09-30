@@ -416,8 +416,12 @@
   (match form
     [([? symbol? key] . args)
      (cond [(cise-lookup-macro key)
-            => (^[expander] `(,@(source-info form env)
-                              ,@(render-rec (expander form env) env)))]
+            => (lambda (expander)
+		 ;; makes a node of the tree?
+		 `(,@(source-info form env)
+		   ;; so, we recurse
+		   ;; after expanding. Now what is an expander?
+		   ,@(render-rec (expander form env) env)))]
            [(or (type-decl-initial? key)
                 (any type-decl-subsequent? args))
             (cise-render-typed-var form "" env)]
