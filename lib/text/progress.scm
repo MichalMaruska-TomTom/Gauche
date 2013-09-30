@@ -78,6 +78,8 @@
               (if (and (not finish-time) (> time-width 0)) " ETA" "    ")
               info-width info-width
               (if (> info-width 0) info "")
+	      ;; mmc: so: \r goes to BOL.
+	      ;; what I see is at the end  ... line line\n
               (if finish-time "\n" "\r"))
       (flush port))
     (define (make-bar)
