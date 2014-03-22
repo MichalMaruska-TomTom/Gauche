@@ -17,7 +17,12 @@ override_dh_auto_configure:
 	ln -sf /usr/share/misc/config.guess .
 	autoconf
 #	(cd gc; autoconf; automake)
-	dh_auto_configure -- --enable-multibyte=utf-8 --enable-ipv6 --enable-threads=pthreads --with-slib=/usr/share/slib
+	dh_auto_configure -- --enable-multibyte=utf-8 --enable-ipv6 \
+	--without-slib --enable-threads=pthreads
+
+# mmc: slib has to be in postinstall script! see ../lib/Makefile.in
+# For RPM ...
+#--with-slib=/usr/share/slib
 
 
 
@@ -31,8 +36,9 @@ endif
 DEB_DH_INSTALL_SOURCEDIR :=  debian/tmp
 
 # pre-install
+# slibcat-in-place
 override_dh_install:
-	make DESTDIR=$(CURDIR)/debian/tmp slibcat-in-place install-pkg install-doc
+	make DESTDIR=$(CURDIR)/debian/tmp install-pkg install-doc
 	dh_install --fail-missing
 
 #	chmod +x $(CURDIR)/debian/tmp/usr/share/gauche/0.9/template.DIST
