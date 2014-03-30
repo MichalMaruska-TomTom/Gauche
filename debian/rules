@@ -35,9 +35,15 @@ endif
 
 DEB_DH_INSTALL_SOURCEDIR :=  debian/tmp
 
+# fixme: this must be done before "make install"
 # pre-install
 # slibcat-in-place
-override_dh_install:
+#   dh_testroot
+#   dh_prep
+override_dh_auto_install:
+	@echo "===============   auto_install ============"
+
+override_dh_install-indep:
 	make DESTDIR=$(CURDIR)/debian/tmp install-pkg install-doc
 	dh_install --fail-missing
 
