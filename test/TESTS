@@ -41,6 +41,6 @@ net.scm
 thread.scm
 dict.scm
 dbidbd.scm
-www.scm
+# www.scm
 cgen.scm
 package.scm
