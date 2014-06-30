@@ -61,6 +61,7 @@
          (Scm_Error "u8vector or string required, but got: %S" data)]))
 
 (define-cproc zlib-version ()
+  ;; mmc: why expr?
   (expr <top> (SCM_MAKE_STR (zlibVersion))))
 
 (define-enum Z_NO_COMPRESSION)
@@ -106,6 +107,7 @@
                                         (window-bits::<fixnum> 15)
                                         (dictionary #f)
                                         (owner? #f))
+  ;; mmc: why not (return (Scm_....))??
   (result (Scm_MakeInflatingPort sink buffer-size window-bits dictionary
                                  (not (SCM_FALSEP owner?)))))
 
