@@ -1,6 +1,6 @@
 /usr/bin/gauche-cesconv
 /usr/bin/gosh
-/usr/lib/libgauche-0.9.so.*0.4
+/usr/lib/libgauche-0.9.so.*[0-9].[0-9]
 /usr/lib/gauche-0.9/*/*-*/binary--io.so
 /usr/lib/gauche-0.9/*/*-*/crypt--bcrypt.so
 /usr/lib/gauche-0.9/*/*-*/file--util.so
@@ -22,7 +22,6 @@
 /usr/lib/gauche-0.9/*/*-*/gauche--vport.so
 /usr/lib/gauche-0.9/*/*-*/gauche-cesconv
 /usr/lib/gauche-0.9/*/*-*/gosh
-/usr/lib/gauche-0.9/*/*-*/libgauche-uvector.so
 /usr/lib/gauche-0.9/*/*-*/math--mt-random.so
 /usr/lib/gauche-0.9/*/*-*/os--windows.so
 /usr/lib/gauche-0.9/*/*-*/parser--peg.so
@@ -44,8 +43,6 @@
 /usr/lib/gauche-0.9/*/*-*/text--tr.so
 /usr/lib/gauche-0.9/*/*-*/text--unicode.so
 /usr/lib/gauche-0.9/*/*-*/util--match.so
-/usr/lib/gauche-0.9/*/*-*/util--queue.so
-/usr/lib/gauche-0.9/*/*-*/util--sparse.so
 /usr/lib/gauche-0.9/site/*-*
 /usr/share/gauche-0.9/[0-9]*/lib/binary/io.scm
 /usr/share/gauche-0.9/[0-9]*/lib/binary/pack.scm
