@@ -4,6 +4,11 @@
 /usr/lib/gauche-0.9/*/*-*/binary--io.so
 /usr/lib/gauche-0.9/*/*-*/crypt--bcrypt.so
 /usr/lib/gauche-0.9/*/*-*/file--util.so
+/usr/lib/gauche-0.9/*/*-*/data--sparse.so
+/usr/lib/gauche-0.9/*/*-*/gauche--uvector.so
+/usr/lib/gauche-0.9/*/*-*/data--queue.so
+/usr/lib/gauche-0.9/*/*-*/gauche--generator.so
+/usr/lib/gauche-0.9/*/*-*/gauche--record.so
 /usr/lib/gauche-0.9/*/*-*/gauche--charconv.so
 /usr/lib/gauche-0.9/*/*-*/gauche--collection.so
 /usr/lib/gauche-0.9/*/*-*/gauche--fcntl.so
@@ -24,10 +29,13 @@
 /usr/lib/gauche-0.9/*/*-*/rfc--md5.so
 /usr/lib/gauche-0.9/*/*-*/rfc--sha.so
 /usr/lib/gauche-0.9/*/*-*/rfc--tls.so
+/usr/lib/gauche-0.9/*/*-*/rfc--822.so
+/usr/lib/gauche-0.9/*/*-*/rfc--mime.so
 /usr/lib/gauche-0.9/*/*-*/srfi-1.so
 /usr/lib/gauche-0.9/*/*-*/srfi-13.so
 /usr/lib/gauche-0.9/*/*-*/srfi-19.so
 /usr/lib/gauche-0.9/*/*-*/srfi-43.so
+/usr/lib/gauche-0.9/*/*-*/srfi-133.so
 /usr/lib/gauche-0.9/*/*-*/sxml--serializer.so
 /usr/lib/gauche-0.9/*/*-*/sxml--ssax.so
 /usr/lib/gauche-0.9/*/*-*/sxml--sxpath.so
