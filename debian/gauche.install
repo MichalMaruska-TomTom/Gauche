@@ -22,6 +22,7 @@
 /usr/lib/gauche-0.9/*/*-*/gauche--vport.so
 /usr/lib/gauche-0.9/*/*-*/gauche-cesconv
 /usr/lib/gauche-0.9/*/*-*/gauche--unicode.so
+/usr/lib/gauche-0.9/*/*-*/gauche--dictionary.so
 /usr/lib/gauche-0.9/*/*-*/gosh
 /usr/lib/gauche-0.9/*/*-*/math--mt-random.so
 /usr/lib/gauche-0.9/*/*-*/os--windows.so
@@ -52,6 +53,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/compat/jfilter.scm
 /usr/share/gauche-0.9/[0-9]*/lib/compat/norational.scm
 /usr/share/gauche-0.9/[0-9]*/lib/compat/stk.scm
+/usr/share/gauche-0.9/[0-9]*/lib/compat/r7rs-srfi-tests.scm
 /usr/share/gauche-0.9/[0-9]*/lib/control/job.scm
 /usr/share/gauche-0.9/[0-9]*/lib/control/thread-pool.scm
 /usr/share/gauche-0.9/[0-9]*/lib/crypt/bcrypt.scm
@@ -81,6 +83,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/package/util.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/serializer/aserializer.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/test/generative.scm
+/usr/share/gauche-0.9/[0-9]*/lib/gauche/test/script.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/vm/debugger.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/vm/insn-core.scm
 /usr/share/gauche-0.9/[0-9]*/lib/gauche/vm/insn.scm
@@ -89,6 +92,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/math/mt-random.scm
 /usr/share/gauche-0.9/[0-9]*/lib/math/prime.scm
 /usr/share/gauche-0.9/[0-9]*/lib/os/windows.scm
+/usr/share/gauche-0.9/[0-9]*/lib/os/windows/console/codepage.scm
 /usr/share/gauche-0.9/[0-9]*/lib/parser/peg.scm
 /usr/share/gauche-0.9/[0-9]*/lib/rfc/822.scm
 /usr/share/gauche-0.9/[0-9]*/lib/rfc/base64.scm
@@ -115,6 +119,7 @@
 /usr/share/gauche-0.9/[0-9]*/lib/srfi-14/set.scm
 /usr/share/gauche-0.9/[0-9]*/lib/srfi-29/bundle.scm
 /usr/share/gauche-0.9/[0-9]*/lib/srfi-29/format.scm
+/usr/share/gauche-0.9/[0-9]*/lib/srfi-146/*.scm
 /usr/share/gauche-0.9/[0-9]*/lib/srfi/*.scm
 /usr/share/gauche-0.9/[0-9]*/lib/srfi-*.scm
 /usr/share/gauche-0.9/[0-9]*/lib/sxml/adaptor.scm
@@ -135,6 +140,8 @@
 /usr/share/gauche-0.9/[0-9]*/lib/text/tr.scm
 /usr/share/gauche-0.9/[0-9]*/lib/text/tree.scm
 /usr/share/gauche-0.9/[0-9]*/lib/text/unicode.scm
+/usr/share/gauche-0.9/[0-9]*/lib/text/template.scm
+/usr/share/gauche-0.9/[0-9]*/lib/text/console/generic.scm
 /usr/share/gauche-0.9/[0-9]*/lib/util/combinations.scm
 /usr/share/gauche-0.9/[0-9]*/lib/util/digest.scm
 /usr/share/gauche-0.9/[0-9]*/lib/util/isomorph.scm
@@ -177,6 +184,8 @@
 /usr/share/gauche-0.9/[0-9]*/lib/scheme/char.scm
 /usr/share/gauche-0.9/[0-9]*/lib/scheme/case-lambda.scm
 /usr/share/gauche-0.9/[0-9]*/lib/scheme/base.scm
+/usr/share/gauche-0.9/[0-9]*/lib/scheme/*.scm
+
 /usr/share/gauche-0.9/[0-9]*/lib/compat/chibi-test.scm
 /usr/share/gauche-0.9/[0-9]*/lib/util/levenshtein.scm
 /usr/share/gauche-0.9/[0-9]*/lib/util/dominator.scm
