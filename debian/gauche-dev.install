@@ -6,6 +6,8 @@
 /usr/lib/gauche-0.9/[0-9]*/*-*/gauche-install
 /usr/lib/gauche-0.9/[0-9]*/*-*/gauche-package
 /usr/lib/libgauche-0.9.so
+/usr/lib/libgauche-static-0.9.a
+/usr/lib/gauche-0.9/[0-9]*/*-*/libgauche-static-0.9.a
 /usr/share/gauche-0.9/[0-9]*/template.*
 /usr/share/gauche-0.9/[0-9]*/aclocal.m4
 /usr/share/gauche-0.9/[0-9]*/lib/genstub
