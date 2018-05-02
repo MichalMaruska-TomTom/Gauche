@@ -13,7 +13,7 @@ override_dh_auto_configure:
 	ln -sf /usr/share/misc/config.guess .
 	autoconf
 #	(cd gc; autoconf; automake)
-	dh_auto_configure -- --enable-multibyte=utf-8 --enable-ipv6 \
+	dh_auto_configure -- --enable-multibyte=utf-8 --enable-ipv6 --enable-tls=axtls \
 	--without-slib --enable-threads=pthreads
 
 # mmc: slib has to be in postinstall script! see ../lib/Makefile.in
