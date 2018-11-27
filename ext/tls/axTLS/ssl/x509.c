@@ -82,6 +82,7 @@ int x509_new(const uint8_t *cert, int *len, X509_CTX **ctx)
     int ret = X509_NOT_OK, offset = 0, cert_size = 0;
     int version = 0;
     X509_CTX *x509_ctx;
+
 #ifdef CONFIG_SSL_CERT_VERIFICATION /* only care if doing verification */
     BI_CTX *bi_ctx;
 #endif
@@ -115,6 +116,8 @@ int x509_new(const uint8_t *cert, int *len, X509_CTX **ctx)
     if (asn1_signature_type(cert, &offset, x509_ctx))
     {
         ret = X509_VFY_ERROR_UNSUPPORTED_DIGEST;
+        printf("Error: ERROR_UNSUPPORTED_DIGEST\n");
+
         goto end_cert;
     }
 
