@@ -753,7 +753,12 @@ int asn1_signature_type(const uint8_t *cert,
         {
 #ifdef CONFIG_SSL_FULL_MODE
             int i;
-            printf("invalid digest: ");
+            printf("mmc invalid digest: memcmp failed\n");
+
+            for (i = 0; i < len; i++)
+                printf("%02x ", sig_oid_prefix[i]);
+
+            printf("\n");
 
             for (i = 0; i < len; i++)
                 printf("%02x ", cert[*offset + i]);

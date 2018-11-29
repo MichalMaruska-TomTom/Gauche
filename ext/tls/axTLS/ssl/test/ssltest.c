@@ -841,7 +841,11 @@ static int cert_tests(void)
 
     ssl_ctx_free(ssl_ctx);
 
-    if (get_file("../ssl/test/qualityssl.com.der", &buf) < 0 ||
+    char* filename = "../ssl/test/qualityssl.com.der";
+    printf("testing file %s\n", filename);
+
+    if (get_file(filename, &buf) < 0 ||
+        // mmc: ->
                                     x509_new(buf, &len, &x509_ctx))
     {
         printf("Cert #10\n");

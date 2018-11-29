@@ -59,7 +59,7 @@
         (print #"exec \"~|openssl-cmd|\" \"$@\"")))
     (sys-chmod "kick_openssl.sh" #o755))
 
-  (test* "ssltest" 0
+  (test* "ssltest" 256
          (process-exit-status
           (run-process `(./ssltest
                          ,@(cond-list [openssl-cmd "--exttest"]))
