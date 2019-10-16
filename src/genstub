@@ -45,11 +45,15 @@
 
 (define (main args)
   (let1 syms '()
+    ;; parse the args:     var -D argument is 's' string.
     (let-args (cdr args) ([#f "D=s" => (^[sym] (push! syms sym))]
                           [else _ (usage)]
                           . args)
       (match args
-        [(file) (guard (e [(<cgen-stub-error> e) (exit 1 "~a" (ref e'message))])
+        [(file)
+         ;; exactly 1 argument?
+         (guard (e [(<cgen-stub-error> e)
+                    (exit 1 "~a" (ref e'message))])
                   (cgen-genstub file :predef-syms syms))]
         [_ (usage)])))
   0)
