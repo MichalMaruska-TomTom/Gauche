@@ -4,11 +4,13 @@
 	dh $@
 
 override_dh_auto_clean:
+	# ./DIST gen
 	dh_auto_clean
 	rm -f configure config.sub config.guess
 	rm -f lib/gauche/config.scm
 
 override_dh_auto_configure:
+	./DIST gen
 	ln -sf /usr/share/misc/config.sub .
 	ln -sf /usr/share/misc/config.guess .
 	autoconf
