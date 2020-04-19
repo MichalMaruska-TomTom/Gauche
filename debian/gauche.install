@@ -111,7 +111,7 @@
 /usr/share/gauche-*/[0-9]*/lib/rfc/sha1.scm
 /usr/share/gauche-*/[0-9]*/lib/rfc/tls.scm
 /usr/share/gauche-*/[0-9]*/lib/rfc/uri.scm
-/usr/share/gauche-*/[0-9]*/lib/r7rs.scm
+# /usr/share/gauche-*/[0-9]*/lib/r7rs.scm
 /usr/share/gauche-*/[0-9]*/lib/slib.scm
 #/usr/share/gauche-*/[0-9]*/lib/slibcat
 /usr/share/gauche-*/[0-9]*/lib/srfi-*.scm
