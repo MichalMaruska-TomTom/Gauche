@@ -1,0 +1,47 @@
+gauche (0.9.4-pre3maruska1) wheezy; urgency=low
+
+  * install new files
+  * libgauche.install
+  * gauche-docs.install
+  * fix renaming  -dev & -doc
+  * migrate cdbs -> dh
+
+ -- Michal Maruska <mmaruska@gmail.com>  Wed, 07 Aug 2013 03:09:40 +0200
+
+gauche (0.9.4-pre3maruska) precise; urgency=low
+
+  * debian: install files hell
+  * Changed SO version (libgauche)
+  * don't install slib
+  * no more auxsys* files to install.
+  * adapt the library version to install, as part of the .deb
+  * install new files too: sysutil.scm, cgen/tmodules.scm
+  * tls
+  * Update for 0.9.4
+  * add new modules to be installed.
+  * Try to use wildcard for debian install files.
+  * Also binary into libgauche.???
+  * debian: forgotten experimental
+  * auto
+  * proper cdbs
+  * remove template.DIST
+  * need to set DEB_DH_INSTALL_SOURCEDIR
+  * fail!
+  * exit 0
+  * Gosh in-tree needs LD_LIBRARY_PATH.  Fix some of those invocations.
+  * again, LD_LIBRARY_PATH
+  * FIX: cgen stub:
+  * extend LD_LIBRARY_PATH for the in-tree run gosh.
+  * Include API-version in the debian (binary) package names.
+  * rename pkg.install  files.
+  * no more gauche-init.scm
+  * Conflicts (with previous packages)
+  * more Provides & Conflicts
+
+ -- Michal Maruska <mmaruska@gmail.com>  Sun, 04 Aug 2013 23:02:48 +0200
+
+gauche (0.9.0) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Michal Maruska <mmaruska@gmail.com>  Wed, 15 Feb 2012 00:53:51 +0100
