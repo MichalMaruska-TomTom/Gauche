@@ -1,3 +1,47 @@
+gauche (0.9.9-maruska) unstable; urgency=medium
+
+  * Extend LD_LIBRARY_PATH to run gosh in (build) tree.
+  * install files hell
+  * no more auxsys* files to install.
+  * install new files too: sysutil.scm, cgen/tmodules.scm
+  * install: add tls
+  * install: add lazy, generator
+  * Try to use wildcard for debian install files.
+  * Adapt to changed SO lib-version (to install as part of the .deb)
+  * libgauche.install: adapt to changed install paths + gosh binary?
+  * install: add experimental
+  * no more gauche-init.scm
+  * gauche-docs.install
+  * install: new files srfi
+  * install: change path for non-numeric version!
+  * install: new srfi-s, www.css
+  * Rename the libgauche package: major-version named. And avoid gosh
+  * Delay installing slib support (to be done in post-install script)
+  * Install new so modules.
+  * new srfi scm modules
+  * Install new scm modules.
+  * install build-standalone
+  * misc renames
+  * install gauche: not the library!
+  * try to fix  ... avoid relinking before using the fresh gosh (to install docs etc)
+  * update install for 0.9.5
+  * fix
+  * sq: update to dh_
+  * install for 0.9.6*
+  * again change. strange
+  * drop the pre-processing of debian/control
+  * configure: enable tls
+  * Use wildcard (*) to be version-proof.A dapt to (debian) multi-lib paths.
+  * Issue the pre-configure command to build from Git.
+  * comment on the issue of progress
+  * fix
+  * no more info?
+  * no r7rs ?
+  * sq >>>>
+  * no dbm.so
+
+ -- Michal Maruska <mmaruska@gmail.com>  Sun, 19 Apr 2020 14:50:28 +0200
+
 gauche (0.9.4-pre3maruska1) wheezy; urgency=low
 
   * install new files
