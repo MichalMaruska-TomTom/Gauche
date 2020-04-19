@@ -185,7 +185,6 @@
 /usr/share/gauche-*/[0-9]*/lib/scheme/case-lambda.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/base.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/*.scm
->>>>>>> 201e5b13e... Adapt to (debian) multi-lib paths. And don't assume any format of the Gauche version.
 
 /usr/share/gauche-*/[0-9]*/lib/compat/chibi-test.scm
 /usr/share/gauche-*/[0-9]*/lib/util/levenshtein.scm
