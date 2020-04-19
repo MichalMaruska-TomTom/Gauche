@@ -1,3 +1,31 @@
+gauche (0.9.9-maruska1) unstable; urgency=medium
+
+  * Extend LD_LIBRARY_PATH to run gosh in (build) tree.
+  * comment on the issue of progress
+  * fix
+  * Delay installing slib support (to be done in post-install script)
+  * try to fix  ... avoid relinking before using the fresh gosh (to install docs etc)
+  * sq: update to dh_
+  * drop the pre-processing of debian/control
+  * configure: enable tls
+  * Issue the pre-configure command to build from Git.
+  * Install files hell: try to use wildcard for debian install files.
+  * no more auxsys* files to install.
+  * install: add tls
+  * Adapt to changed SO lib-version (to install as part of the .deb)
+  * libgauche.install: adapt to changed install paths + gosh binary?
+  * install: add experimental
+  * no more gauche-init.scm
+  * gauche-docs.install
+  * install: new files srfi
+  * Don't assume gauche-0.9, Use wildcard (*) to be version-proof.A dapt to (debian) multi-lib paths. install: change path for non-numeric version!
+  * Rename the libgauche package: major-version named. And avoid gosh
+  * no r7rs ?
+  * no dbm.so
+  * no more info?
+
+ -- Michal Maruska <mmaruska@gmail.com>  Sun, 19 Apr 2020 17:32:16 +0200
+
 gauche (0.9.4-pre3maruska1) wheezy; urgency=low
 
   * install new files
