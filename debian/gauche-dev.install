@@ -12,7 +12,7 @@
 /usr/lib/*/libgauche-static-*.a
 /usr/lib/*/gauche-*/[0-9]*/*-*/libgauche-*.so
 /usr/lib/*/gauche-*/[0-9]*/*-*/libgauche-static-*.a
-/usr/share/gauche-*/[0-9]*/template.*
+/usr/share/gauche-*/[0-9]*/package-templates/*
 /usr/share/gauche-*/[0-9]*/aclocal.m4
 /usr/share/gauche-*/[0-9]*/lib/genstub
 /usr/share/gauche-*/[0-9]*/lib/precomp
