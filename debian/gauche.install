@@ -48,6 +48,8 @@
 /usr/lib/*/gauche-*/*/*-*/text--tr.so
 /usr/lib/*/gauche-*/*/*-*/util--match.so
 /usr/lib/*/gauche-*/site/*-*
+# the rest:
+/usr/lib/*/gauche-*/*/*/*.so
 /usr/share/gauche-*/[0-9]*/lib/binary/io.scm
 /usr/share/gauche-*/[0-9]*/lib/binary/pack.scm
 /usr/share/gauche-*/[0-9]*/lib/binary/ftype.scm
@@ -144,7 +146,7 @@
 /usr/share/gauche-*/[0-9]*/lib/text/tree.scm
 /usr/share/gauche-*/[0-9]*/lib/text/unicode.scm
 /usr/share/gauche-*/[0-9]*/lib/text/template.scm
-/usr/share/gauche-*/[0-9]*/lib/text/console/generic.scm
+# /usr/share/gauche-*/[0-9]*/lib/text/console/generic.scm
 /usr/share/gauche-*/[0-9]*/lib/util/combinations.scm
 /usr/share/gauche-*/[0-9]*/lib/util/digest.scm
 /usr/share/gauche-*/[0-9]*/lib/util/isomorph.scm
@@ -207,6 +209,7 @@
 /usr/share/gauche-*/[0-9]*/lib/r7rs-setup.scm
 /usr/share/gauche-*/[0-9]*/lib/text/edn.scm
 /usr/share/gauche-*/[0-9]*/lib/text/unicode/codeset.scm
+/usr/share/gauche-*/[0-9]*/lib/text/*.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/vector/c128.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/vector/c64.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/vector/f64.scm
@@ -257,3 +260,4 @@
 /usr/share/gauche-*/[0-9]*/lib/gauche/uvector/u8.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/uvector/base.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/regexp/sre.scm
+/usr/share/gauche-*/[0-9]*/lib/srfi-159/*.scm
