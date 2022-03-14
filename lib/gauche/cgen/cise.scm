@@ -100,6 +100,7 @@
 ;; Environment keeps transient information during cise macro expansion.
 ;; It must be treated opaque from outside of CISE module.
 (define-class <cise-env> ()
+  ;; mmc: not a <cise-context> just a symbol:
   ((context :init-keyword :context) ; toplevel, stmt or expr
    (decls   :init-keyword :decls)   ; list of extra decls
    ))
@@ -114,6 +115,9 @@
 
 (define (null-env)      (make-env 'stmt '()))
 
+
+
+;; making "derived" or incidental env:
 (define (expr-env env)
   (if (expr-ctx? env) env (make-env 'expr (env-decls env))))
 (define (stmt-env env)
@@ -184,7 +188,7 @@
 ;; cise-register-macro! NAME EXPANDER &optional AMBIENT
 ;;
 ;;   Register cise macro expander EXPANDER with the name NAME.
-;;   EXPANDER takes twi arguments, the form to expand and a
+;;   EXPANDER takes two arguments, the form to expand and a
 ;;   opaque cise environmen.
 ;;
 (define (cise-register-macro! name expander :optional (ambient (cise-ambient)))
@@ -241,16 +245,30 @@
        (ensure-stmt-ctx form env)
        (match form . clauses))]
     [(_ "clauses" op env clauses ())
+     ;; this matches when  empty ^^
      (define-cise-stmt "clauses" op env clauses (:where))]
     [(_ "clauses" op env (clause ...) (x . y))
+     ;; this matches     ^^^^^^       ^^^
+     ;; why this pour-over ?
      (define-cise-stmt "clauses" op env (clause ... x) y)]
     ;; entry
+    ;; mmc: what is `env'?
     [(_ (op . args) . body)       ; single pattern case
      (define-cise-stmt "clauses" op env (((_ . args) . body)) ())]
     [(_ op (pat . body) .  clauses) ; (pat . body) rules out a single symbol
      (define-cise-stmt "clauses" op env ((pat . body)) clauses)]
+    ;; here we have env:
     [(_ op env . clauses)
      (define-cise-stmt "clauses" op env () clauses)]))
+
+;;  (define-cise-stmt when
+;;    [(_ test . forms) `(if ,test (begin ,@forms))])
+;; So  second one:  op = when  (pat . body): pat = (_ test . forms)
+;; body = `(......))_
+;;  (define-cise-stmt "clauses" when env (((test . forms) . body)) ())]
+;; and this matches ......
+
+;; :where  ../../../src/librx.scm
 
 (define-syntax define-cise-expr
   (syntax-rules (:where)
@@ -305,7 +323,10 @@
   (let* ([env (case ctx
                 [(toplevel) (make-env 'toplevel '())]
                 [(stmt #f)  (null-env)]
+
+		;; mmc: I don't see this as `expr' <cise-env> !
                 [(expr #t)  (expr-env (null-env))]
+
                 [else (error "cise-render: invalid context:" ctx)])]
          [stree (render-rec form env)])
     (render-finalize `(,@(render-env-decls env) ,stree) port)))
@@ -318,6 +339,7 @@
   (define current-line 1)
   (define (rec stree)
     (match stree
+	   ;; so that is a leaf!
       [('source-info (? string? file) line)
        (cond [(and (equal? file current-file) (eqv? line current-line))]
              [(and (equal? file current-file) (eqv? line (+ 1 current-line)))
@@ -330,6 +352,7 @@
                 (format port "\n#line ~a ~s\n" line file))])]
       ['|#reset-line| ; reset source info
        (set! current-file #f) (set! current-line 0)]
+      ;; the only internal node:
       [(x . y) (rec x) (rec y)]
       [(? (any-pred string? symbol? number?) x) (display x port)]
       [_ #f]))
@@ -363,23 +386,43 @@
 		   ,@(render-rec (expander form env) env)))]
            [(or (type-decl-initial? key)
                 (any type-decl-subsequent? args))
+	    ;; var declaration...
             (cise-render-typed-var form "" env)]
            [else
+	    ;; mmc: new env!
             (let1 eenv (expr-env env)
               (wrap-expr
                `(,@(source-info form env)
+		 ;; function call!
                  ,(cise-render-identifier key) "("
                  ,@(intersperse "," (map (cut render-rec <> eenv) args))
                  ")")
                env))])]
+
+    ;; mmc: so x is not symbol.  (3  ) or ("aaa" )
     [(x . y)     form]   ; already stree
+
+
     ['|#reset-line| '|#reset-line|] ; special directive to reset line info
+
+    ;; not a list, but 'class what's the point?
     [[? type-decl-initial?] (wrap-expr (cise-render-typed-var form "" env) env)]
+
+    ;; depends on  env ... which is <cise-env>, its 'context
+    ;;continuation? of ^^
+    ;;   ( ) class ahoj (....) ... ?
     [[? identifier?] (wrap-expr (cise-render-identifier (unwrap-syntax form))
                                 env)]
+
     [[? string?] (wrap-expr (write-to-string form) env)]
+
+    ; is this an ending?
+    ; a = 15;
+    ; or   15; is valid C?
     [[? real?]   (wrap-expr form env)]
+
     [()          '()]
+    ;; what is this? #-syntax
     [#\'         (wrap-expr "'\\''"  env)]
     [#\\         (wrap-expr "'\\\\'" env)]
     [#\newline   (wrap-expr "'\\n'"  env)]
@@ -418,11 +461,13 @@
 
   (eval '(use gauche.cgen.cise) environment)
   (eval '(use util.match) environment)
-  (parameterize ([cise-ambient ambient])
+  (parameterize ([cise-ambient ambient]) ; not context
+    ;; mmc: is there a way to change this toutp?
     (let loop ([toutp outp])
       (match (read inp)
         [(? eof-object?) (finish toutp)]
         [('.raw-c-code . cs)
+	 ;; just copy:
          (dolist [c cs] (newline toutp) (display c toutp)) (loop toutp)]
         [(and ((or 'define-cise-stmt 'define-cise-expr 'define-cise-toplevel)
                . _)
@@ -1341,6 +1386,8 @@
   (or (memq sym '(const class enum struct volatile unsigned long
                   char short int float double .array .struct .union .function))
       (and (symbol? sym)
+	   ;; mmc: ... but this is not simple '*', but type*
+	   ;; but indeed we use (or  initial?  subsequent?)
            (#/.[*&]$/ (symbol->string sym)))))
 
 (define (type-decl-subsequent? sym)
@@ -1410,6 +1457,9 @@
 ;; Allow var::type as (var :: type)
 ;; and (var::type init) as (var :: type init)
 (define (canonicalize-vardecl vardecls)
+  ;; mmc: this is 1 such declaration, here we
+  ;; handle 1 token: from right to left:  var:: -> var :: ...
+  ;;
   (define (expand-type elt seed)
     (cond
      [(keyword? elt)  ;; The case of (var ::type)
@@ -1422,6 +1472,10 @@
         [#/^(.+)::(.+)$/ (_ v t)
             `(,(string->symbol v) :: ,(string->symbol t) ,@seed)]
         [else (cons elt seed)])]
+     [(keyword? elt)  ;; The case of (var ::type)
+      (rxmatch-case (keyword->string elt)
+        [#/^:(.+)$/ (_ t) `(:: ,(string->symbol t) ,@seed)]
+        [else (cons elt seed)])]
      [else (cons elt seed)]))
 
   (define (err decl) (error "invalid variable declaration:" decl))
@@ -1432,10 +1486,14 @@
       [([? keyword? xx] . rest) (err xx)]
       [([? symbol? var] ':: type . rest)
        (scan rest `((,var :: ,type) ,@r))]
+      ;; mmc: if that did not apply -> default type
       [([? symbol? var] . rest)
        (scan rest `((,var :: ScmObj) ,@r))]
+      ;; mmc: so this indeed scans many vardecls!
       [(([? symbol? v] [? symbol? t] . args) . rest)
        (scan rest `(,(expand-type v (expand-type t args)) ,@r))]
+      ;; mmc: no match ->  ((symbol non-symbol ..) .....)
+      ;;
       [(([? symbol? vt] . args) . rest)
        (scan rest `(,(expand-type vt args) ,@r))]
       [(xx . rest) (err xx)]))
