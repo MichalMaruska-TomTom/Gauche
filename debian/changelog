@@ -1,3 +1,47 @@
+gauche (0.9.11-maruska) unstable; urgency=medium
+
+  * try to fix  ... avoid relinking before using the fresh gosh (to install docs etc)
+  * Install new so modules.
+  * new srfi scm modules
+  * Install new scm modules.
+  * install build-standalone
+  * misc renames
+  * libgauche conflict
+  * update install for 0.9.5
+  * fix
+  * debian: upgrade to compat 9
+  * sq: update to dh_
+  * install for 0.9.6*
+  * again change. strange
+  * drop the pre-processing of debian/control
+  * tls
+  * Adapt to (debian) multi-lib paths. And don't assume any format of the Gauche version.
+  * Issue the pre-configure command to build from Git.
+  * torzo! Delay installing slib support (to be done in post-install script)
+  * add new so modules + scm
+  * auto
+  * drop some
+  * Include API-version in the debian (binary) package names.
+  * debian: Don't need quilt
+  * rename pkg.install  files. Even -dev & -doc
+  * bump up compat & DH
+  * Provides & Conflicts (with previous packages)
+  * update dev Plist
+  * Fix libgauche package. remove overlap in libgauche.install
+  * update gauche plist
+  * comments only
+  * expanding macro...
+  * Drop the api-fixed packaging.
+  * my comments in cgen
+  * comment on the issue of progress
+  * simple comments, reformat
+  * Extend LD_LIBRARY_PATH to run gosh in (build) tree.
+  * revert !!! -ftest
+  * adapt PLIST
+  * migrate to 13 compat
+
+ -- Michal Maruska <mmaruska@gmail.com>  Mon, 14 Mar 2022 19:45:29 +0100
+
 gauche (0.9.4-pre3maruska1) wheezy; urgency=low
 
   * install new files
