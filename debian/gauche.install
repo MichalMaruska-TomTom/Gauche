@@ -34,12 +34,13 @@
 /usr/lib/*/gauche-*/*/*-*/rfc--tls--mbed.so
 /usr/lib/*/gauche-*/*/*-*/rfc--822.so
 /usr/lib/*/gauche-*/*/*-*/rfc--mime.so
-/usr/lib/*/gauche-*/*/*-*/srfi-1.so
+# /usr/lib/*/gauche-*/*/*-*/srfi-1.so
 /usr/lib/*/gauche-*/*/*-*/srfi-13.so
 /usr/lib/*/gauche-*/*/*-*/srfi-19.so
 /usr/lib/*/gauche-*/*/*-*/srfi-43.so
-/usr/lib/*/gauche-*/*/*-*/srfi-133.so
-/usr/lib/*/gauche-*/*/*-*/srfi-144.so
+#/usr/lib/*/gauche-*/*/*-*/srfi-133.so
+#/usr/lib/*/gauche-*/*/*-*/srfi-144.so
+
 /usr/lib/*/gauche-*/*/*-*/sxml--serializer.so
 /usr/lib/*/gauche-*/*/*-*/sxml--ssax.so
 /usr/lib/*/gauche-*/*/*-*/sxml--sxpath.so
@@ -59,8 +60,8 @@
 /usr/share/gauche-*/[0-9]*/lib/compat/norational.scm
 /usr/share/gauche-*/[0-9]*/lib/compat/stk.scm
 /usr/share/gauche-*/[0-9]*/lib/compat/r7rs-srfi-tests.scm
-/usr/share/gauche-*/[0-9]*/lib/control/job.scm
-/usr/share/gauche-*/[0-9]*/lib/control/thread-pool.scm
+usr/share/gauche-*/*/lib/control/*.scm
+# usr/share/gauche-0.98/0.9.11/lib/control/cseq.scm
 /usr/share/gauche-*/[0-9]*/lib/crypt/bcrypt.scm
 /usr/share/gauche-*/[0-9]*/lib/data/random.scm
 /usr/share/gauche-*/[0-9]*/lib/dbd/null.scm
@@ -81,6 +82,7 @@
 /usr/share/gauche-*/[0-9]*/lib/gauche/experimental/app.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/experimental/lamb.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/experimental/ref.scm
+/usr/share/gauche-*/[0-9]*/lib/gauche/experimental/shared-struct.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/mop/*.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/package/build.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/package/compile.scm
@@ -89,9 +91,11 @@
 /usr/share/gauche-*/[0-9]*/lib/gauche/serializer/aserializer.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/test/generative.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/test/script.scm
+/usr/share/gauche-*/[0-9]*/lib/gauche/test/diff.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/vm/debugger.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/vm/insn-core.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/vm/insn.scm
+/usr/share/gauche-*/[0-9]*/lib/gauche/vm/register-machine.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/vm/profiler.scm
 /usr/share/gauche-*/[0-9]*/lib/math/const.scm
 /usr/share/gauche-*/[0-9]*/lib/math/mt-random.scm
@@ -120,8 +124,9 @@
 /usr/share/gauche-*/[0-9]*/lib/slib.scm
 #/usr/share/gauche-*/[0-9]*/lib/slibcat
 /usr/share/gauche-*/[0-9]*/lib/srfi-*.scm
-/usr/share/gauche-*/[0-9]*/lib/srfi-14/query.scm
-/usr/share/gauche-*/[0-9]*/lib/srfi-14/set.scm
+# /usr/share/gauche-*/[0-9]*/lib/srfi-14/query.scm
+# /usr/share/gauche-*/[0-9]*/lib/srfi-14/set.scm
+
 /usr/share/gauche-*/[0-9]*/lib/srfi-29/bundle.scm
 /usr/share/gauche-*/[0-9]*/lib/srfi-29/format.scm
 /usr/share/gauche-*/[0-9]*/lib/srfi-146/*.scm
@@ -168,6 +173,7 @@
 /usr/share/gauche-*/[0-9]*/lib/www/cgi/test.scm
 /usr/share/gauche-*/[0-9]*/lib/www/css.scm
 /usr/share/gauche-*/[0-9]*/lib/lang/asm/x86_64.scm
+/usr/share/gauche-*/[0-9]*/lib/lang/c/*.scm
 /usr/share/gauche-*/[0-9]*/lib/text/line-edit.scm
 /usr/share/gauche-*/[0-9]*/lib/text/gap-buffer.scm
 /usr/share/gauche-*/[0-9]*/lib/text/console.scm
@@ -194,15 +200,9 @@
 /usr/share/gauche-*/[0-9]*/lib/compat/chibi-test.scm
 /usr/share/gauche-*/[0-9]*/lib/util/levenshtein.scm
 /usr/share/gauche-*/[0-9]*/lib/util/dominator.scm
-/usr/share/gauche-*/[0-9]*/lib/data/sparse.scm
-/usr/share/gauche-*/[0-9]*/lib/data/queue.scm
-/usr/share/gauche-*/[0-9]*/lib/data/trie.scm
-/usr/share/gauche-*/[0-9]*/lib/data/ring-buffer.scm
-/usr/share/gauche-*/[0-9]*/lib/data/imap.scm
-/usr/share/gauche-*/[0-9]*/lib/data/ideque.scm
-/usr/share/gauche-*/[0-9]*/lib/data/heap.scm
-/usr/share/gauche-*/[0-9]*/lib/data/cache.scm
+/usr/share/gauche-*/[0-9]*/lib/data/*.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/cgen/standalone.scm
+/usr/share/gauche-*/[0-9]*/lib/gauche/cgen/bbb.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/interactive/*.scm
 /usr/share/gauche-*/site/lib
 # new:
@@ -210,6 +210,7 @@
 /usr/share/gauche-*/[0-9]*/lib/text/edn.scm
 /usr/share/gauche-*/[0-9]*/lib/text/unicode/codeset.scm
 /usr/share/gauche-*/[0-9]*/lib/text/*.scm
+/usr/share/gauche-*/[0-9]*/lib/text/console/*.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/vector/c128.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/vector/c64.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/vector/f64.scm
@@ -226,11 +227,12 @@
 /usr/share/gauche-*/[0-9]*/lib/scheme/stream/derived.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/stream/primitive.scm
 /usr/share/gauche-*/[0-9]*/lib/scheme/mapping/hash.scm
-/usr/share/gauche-*/[0-9]*/lib/rfc/tls/mbed.scm
+/usr/share/gauche-*/[0-9]*/lib/scheme/show/*.scm
+
+/usr/share/gauche-*/[0-9]*/lib/rfc/tls/*.scm
 /usr/share/gauche-*/[0-9]*/lib/rfc/http/tunnel.scm
+/usr/share/gauche-*/[0-9]*/lib/rfc/uuid*scm
 /usr/share/gauche-*/[0-9]*/lib/parser/peg/deprecated.scm
-/usr/share/gauche-*/[0-9]*/lib/data/priority-map.scm
-/usr/share/gauche-*/[0-9]*/lib/control/mapper.scm
 /usr/share/gauche-*/[0-9]*/lib/srfi/160/u8.scm
 /usr/share/gauche-*/[0-9]*/lib/srfi/160/u64.scm
 /usr/share/gauche-*/[0-9]*/lib/srfi/160/u32.scm
@@ -261,3 +263,10 @@
 /usr/share/gauche-*/[0-9]*/lib/gauche/uvector/base.scm
 /usr/share/gauche-*/[0-9]*/lib/gauche/regexp/sre.scm
 /usr/share/gauche-*/[0-9]*/lib/srfi-159/*.scm
+/usr/share/gauche-*/[0-9]*/lib/srfi-159/*.sld
+/usr/share/gauche-*/[0-9]*/lib/srfi-159/internal/*.sld
+/usr/share/gauche-*/[0-9]*/lib/srfi-159/internal/*.scm
+/usr/share/gauche-*/[0-9]*/lib/srfi/159/*.scm
+# 9.11
+# control data
+# lang/c
