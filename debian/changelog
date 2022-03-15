@@ -1,3 +1,22 @@
+gauche (0.9.11.1-maruska) unstable; urgency=medium
+
+  * expanding macro...
+  * auto
+  * Include API-version in the debian (binary) package names.
+  * rename pkg.install  files. Even -dev & -doc
+  * Provides & Conflicts (with previous packages)
+  * Fix libgauche package. remove overlap in libgauche.install
+  * comments only
+  * Drop the api-fixed packaging.
+  * my comments in cgen
+  * comment on the issue of progress
+  * simple comments, reformat
+  * fix
+  * Issue the pre-configure command to build from Git.
+  * Extend LD_LIBRARY_PATH to run gosh in (build) tree.
+
+ -- Michal Maruska <mmaruska@gmail.com>  Tue, 15 Mar 2022 13:56:31 +0100
+
 gauche (0.9.4-pre3maruska1) wheezy; urgency=low
 
   * install new files
