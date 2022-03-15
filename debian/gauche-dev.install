@@ -10,7 +10,10 @@
 /usr/lib/*/gauche-*/[0-9]*/*-*/gauche-package
 /usr/lib/*/libgauche-*.so
 /usr/lib/*/libgauche-static-*.a
+# the symlinks:
 /usr/lib/*/gauche-*/[0-9]*/*-*/libgauche-*.so
+/usr/lib/*/gauche-*/[0-9]*/*-*/libgauche-*.so.0
+#
 /usr/lib/*/gauche-*/[0-9]*/*-*/libgauche-static-*.a
 /usr/share/gauche-*/[0-9]*/package-templates/*
 /usr/share/gauche-*/[0-9]*/aclocal.m4

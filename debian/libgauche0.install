@@ -1,6 +1,3 @@
 /usr/lib/*/libgauche-*.so.*
 # why does Gauche install this?
-/usr/lib/*/gauche-*/[0-9]*/*-*/libgauche-*.so.*
-
-# /usr/lib/libgauche-0.9.so.0
-# /usr/lib/libgauche-0.9.so.*0.[0-9]
+/usr/lib/*/gauche-*/[0-9]*/*-*/libgauche-*.so.0.11

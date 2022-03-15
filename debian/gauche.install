@@ -50,7 +50,13 @@
 /usr/lib/*/gauche-*/*/*-*/util--match.so
 /usr/lib/*/gauche-*/site/*-*
 # the rest:
-/usr/lib/*/gauche-*/*/*/*.so
+# this is a problem: the symlink should be in the -dev package?
+#/usr/lib/*/gauche-*/*/*/*.so
+/usr/lib/*/gauche-*/*/*-*/data*.so
+/usr/lib/*/gauche-*/*/*-*/gauche-*.so
+/usr/lib/*/gauche-*/*/*-*/scheme-*.so
+/usr/lib/*/gauche-*/*/*-*/text-*.so
+/usr/lib/*/gauche-*/*/*-*/srfi*.so
 /usr/share/gauche-*/[0-9]*/lib/binary/io.scm
 /usr/share/gauche-*/[0-9]*/lib/binary/pack.scm
 /usr/share/gauche-*/[0-9]*/lib/binary/ftype.scm
