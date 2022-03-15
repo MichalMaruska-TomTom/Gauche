@@ -9,10 +9,11 @@ Homepage: http://practical-scheme.net/gauche/
 
 Package: gauche
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: wiliki (<< 0.5.1)
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgauche0
+Conflicts: wiliki (<< 0.5.1), gauche (<< 0.9.4~pre3maruska1)
 Breaks: gauche-dev (<= 0.9-11)
 Replaces: gauche-dev (<= 0.9-11)
+Provides: gauche
 Recommends: slib
 Suggests: r5rs-doc, gauche-doc, gauche-zlib, gauche-gdbm
 Description: A Scheme implementation designed for script writing
@@ -25,6 +26,7 @@ Description: A Scheme implementation designed for script writing
 Package: libgauche0
 Section: libs
 Architecture: any
+Provides: libgauche0
 Breaks: gauche (<= 0.9-11)
 Replaces: gauche (<= 0.9-11)
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -36,7 +38,9 @@ Description: Gauche runtime shared library
 
 Package: gauche-gdbm
 Architecture: any
+Provides: gauche-gdbm
 Depends: gauche (>= 0.9-15), ${shlibs:Depends}, ${misc:Depends}
+Conflicts:  gauche-gdbm (<< 0.9.4~pre3maruska1)
 Description: gdbm binding for Gauche
  Gauche is a Scheme implementation developed to be a handy script
  interpreter, which allows programmers and system administrators to
@@ -48,9 +52,11 @@ Description: gdbm binding for Gauche
 
 Package: gauche-zlib
 Architecture: any
-Depends: gauche (>= 0.9-15), ${shlibs:Depends}, ${misc:Depends}
+Depends: gauche, ${shlibs:Depends}, ${misc:Depends}
 Breaks: gauche (<= 0.9-11), gauche-dev (<= 0.9-11)
 Replaces: gauche (<= 0.9-11)
+Provides: gauche-zlib
+Conflicts:  gauche-zlib (<< 0.9.4~pre3maruska1)
 Description: zlib binding for Gauche
  Gauche is a Scheme implementation developed to be a handy script
  interpreter, which allows programmers and system administrators to
@@ -63,9 +69,11 @@ Description: zlib binding for Gauche
 Package: gauche-dev
 Section: lisp
 Architecture: any
-Depends: gauche (>= 0.9-15), ${shlibs:Depends}, ${misc:Depends}
+Depends: gauche, ${shlibs:Depends}, ${misc:Depends}
 Breaks: gauche (<= 0.9-11)
+Conflicts: gauche-dev (<< 0.9.4~pre3maruska1)
 Replaces: gauche (<= 0.9-11)
+Provides: gauche-dev
 Description: Development files for Gauche
  Gauche is a Scheme implementation developed to be a handy script
  interpreter, which allows programmers and system administrators to
@@ -79,6 +87,8 @@ Package: gauche-doc
 Section: doc
 Architecture: all
 Depends: ${misc:Depends}
+Provides: gauche-doc
+Conflicts: gauche-doc (<< 0.9.4~pre3maruska1)
 Description: Reference manual of Gauche
  Gauche is a Scheme implementation developed to be a handy script
  interpreter, which allows programmers and system administrators to

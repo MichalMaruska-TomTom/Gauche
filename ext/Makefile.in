@@ -21,7 +21,7 @@ top_srcdir   = @top_srcdir@
 GAUCHE_VERSION = @GAUCHE_VERSION@
 DESTDIR     =
 
-@CROSS_COMPILING_no@GOSH           = $(top_builddir)/src/gosh -ftest
+@CROSS_COMPILING_no@GOSH           = LD_LIBRARY_PATH=$$LD_LIBRARY_PATH:$(top_builddir)/src/ $(top_builddir)/src/gosh -ftest
 @CROSS_COMPILING_yes@GOSH           = gosh
 GAUCHE_INSTALL = $(GOSH) $(top_srcdir)/src/gauche-install.in -C
 TEMPLATE_INST_DIR = $(datadir)/gauche-@GAUCHE_ABI_VERSION@/$(GAUCHE_VERSION)/package-templates
