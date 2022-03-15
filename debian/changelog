@@ -1,3 +1,9 @@
+gauche (0.9.11.1-maruska2) unstable; urgency=medium
+
+  * Fix the distribution of libgauche* files/symlinks
+
+ -- Michal Maruska <mmaruska@gmail.com>  Tue, 15 Mar 2022 20:45:13 +0100
+
 gauche (0.9.11.1-maruska) unstable; urgency=medium
 
   * expanding macro...
