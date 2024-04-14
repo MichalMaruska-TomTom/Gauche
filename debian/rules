@@ -45,6 +45,7 @@ override_dh_auto_install:
 
 override_dh_install-indep:
 	make DESTDIR=$(CURDIR)/debian/tmp install-pkg install-doc
-	dh_install --fail-missing
+	dh_install
+	dh_missing --fail-missing
 
 #	chmod +x $(CURDIR)/debian/tmp/usr/share/gauche/0.9/template.DIST
