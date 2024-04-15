@@ -1,0 +1,3 @@
+usr/share/gauche-*/*/lib/build-standalone
+usr/share/gauche-*/*/lib/check-script
+usr/share/gauche-*/*/lib/genstub
