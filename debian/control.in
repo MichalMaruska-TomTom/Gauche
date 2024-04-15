@@ -3,7 +3,7 @@ Section: lisp
 Priority: optional
 Maintainer: Debian Gauche Maintainers <pkg-gauche-devel@lists.alioth.debian.org>
 Uploaders: Hatta Shuzo <hattas@debian.org>, YAEGASHI Takeshi <yaegashi@debian.org>, NIIBE Yutaka <gniibe@fsij.org>, Jens Thiele <karme@karme.de>
-Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7.0.50~), autotools-dev, texinfo, libgdbm-dev, autoconf, slib (>> 3a5), zlib1g-dev, libatomic-ops-dev, netbase
+Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7.0.50~), autotools-dev, texinfo, libgdbm-dev, autoconf, slib (>> 3a5), zlib1g-dev, libatomic-ops-dev, netbase, gauche
 Standards-Version: 3.8.4
 Homepage: http://practical-scheme.net/gauche/
 
