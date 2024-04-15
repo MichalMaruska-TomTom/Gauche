@@ -1,5 +1,8 @@
 /usr/bin/gauche-cesconv
 /usr/bin/gosh
+
+/usr/lib/*/gauche-0.9[0-9]*/*/*/libgauche-0.9*.so
+/usr/lib/*/gauche-0.9[0-9]*/*/*/libgauche-0.9*.so.*
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/binary--io.so
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/crypt--bcrypt.so
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/file--util.so
