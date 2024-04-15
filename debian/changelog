@@ -1,3 +1,17 @@
+gauche (0.9.14-maruska) unstable; urgency=medium
+
+  * comments only
+  * try to fix  ... avoid relinking before using the fresh gosh (to install docs etc)
+  * bump the API version
+  * bump auto to version
+  * compat to 11
+  * adapt install
+  * deb: update compat & dh_install/missing
+  * update *.install
+  * more .so
+
+ -- Michal Maruska <mmaruska@gmail.com>  Mon, 15 Apr 2024 02:44:09 +0200
+
 gauche (0.9.4-pre3maruska1) wheezy; urgency=low
 
   * install new files
