@@ -14,3 +14,4 @@ usr/lib/*/libgauche-static-0.9*.a
 # /usr/share/gauche-0.9*/[0-9]*/lib/gencomp
 /usr/share/aclocal/gauche.m4
 usr/lib/*/gauche-*/*/*/libgauche-static-0.*.a
+/usr/share/cmake/Modules/
