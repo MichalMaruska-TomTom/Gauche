@@ -7,9 +7,9 @@ Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7.0.50~), autotools-dev, texinf
 Standards-Version: 3.8.4
 Homepage: http://practical-scheme.net/gauche/
 
-Package: gauche-@GAUCHE_VERSION@
+Package: gauche@GAUCHE_VERSION@
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libgauche0-@GAUCHE_VERSION@
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgauche0@GAUCHE_VERSION@
 Conflicts: wiliki (<< 0.5.1), gauche (<< 0.9.4~pre3maruska1)
 Breaks: gauche-dev (<= 0.9-11)
 Replaces: gauche-dev (<= 0.9-11)
@@ -23,7 +23,7 @@ Description: A Scheme implementation designed for script writing
  built-in system interface, native multilingual support are some of
  the author's goals.
 
-Package: libgauche0-@GAUCHE_VERSION@
+Package: libgauche0@GAUCHE_VERSION@
 Section: libs
 Architecture: any
 Provides: libgauche0
@@ -36,10 +36,10 @@ Description: Gauche runtime shared library
  .
  This package contains Gauche runtime shared library.
 
-Package: gauche-@GAUCHE_VERSION@-gdbm
+Package: gauche@GAUCHE_VERSION@-gdbm
 Architecture: any
 Provides: gauche-gdbm
-Depends: gauche-@GAUCHE_VERSION@ (>= 0.9-15), ${shlibs:Depends}, ${misc:Depends}
+Depends: gauche@GAUCHE_VERSION@ (>= 0.9-15), ${shlibs:Depends}, ${misc:Depends}
 Conflicts:  gauche-gdbm (<< 0.9.4~pre3maruska1)
 Description: gdbm binding for Gauche
  Gauche is a Scheme implementation developed to be a handy script
@@ -50,9 +50,9 @@ Description: gdbm binding for Gauche
  .
  This package contains GDBM binding modules for Gauche.
 
-Package: gauche-@GAUCHE_VERSION@-zlib
+Package: gauche@GAUCHE_VERSION@-zlib
 Architecture: any
-Depends: gauche-@GAUCHE_VERSION@, ${shlibs:Depends}, ${misc:Depends}
+Depends: gauche@GAUCHE_VERSION@, ${shlibs:Depends}, ${misc:Depends}
 Breaks: gauche (<= 0.9-11), gauche-dev (<= 0.9-11)
 Replaces: gauche (<= 0.9-11)
 Provides: gauche-zlib
@@ -66,10 +66,10 @@ Description: zlib binding for Gauche
  .
  This package contains zlib binding modules for Gauche.
 
-Package: gauche-@GAUCHE_VERSION@-dev
+Package: gauche@GAUCHE_VERSION@-dev
 Section: lisp
 Architecture: any
-Depends: gauche-@GAUCHE_VERSION@, ${shlibs:Depends}, ${misc:Depends}
+Depends: gauche@GAUCHE_VERSION@, ${shlibs:Depends}, ${misc:Depends}
 Breaks: gauche (<= 0.9-11)
 Conflicts: gauche-dev (<< 0.9.4~pre3maruska1)
 Replaces: gauche (<= 0.9-11)
@@ -83,7 +83,7 @@ Description: Development files for Gauche
  .
  This package contains development files of Gauche.
 
-Package: gauche-@GAUCHE_VERSION@-doc
+Package: gauche@GAUCHE_VERSION@-doc
 Section: doc
 Architecture: all
 Depends: ${misc:Depends}
