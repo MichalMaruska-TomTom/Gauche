@@ -1,0 +1,5 @@
+/usr/lib/*/gauche-0.9*/*/*/libgauche-0.9*.so
+/usr/lib/*/gauche-0.9*/*/*/libgauche-0.9*.so.*
+/usr/lib/*/libgauche-0.9*.so.0.*
+/usr/lib/*/libgauche-0.9*.so.0
+/usr/lib/*/libgauche-0.9*.so.0.*

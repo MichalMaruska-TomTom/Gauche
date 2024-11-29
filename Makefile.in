@@ -96,6 +96,9 @@ install-pkg:
 	$(INSTALL_DATA) "$(srcdir)/m4/gauche.m4" "$(DESTDIR)$(GAUCHE_ACLOCAL_DIR)/aclocal.m4"
 	$(MKINSTDIR) "$(DESTDIR)$(datadir)/aclocal"
 	$(INSTALL_DATA) "$(srcdir)/m4/gauche.m4" "$(DESTDIR)$(datadir)/aclocal/gauche.m4"
+	$(MKINSTDIR) "$(DESTDIR)/usr/share/cmake/Modules"
+	$(INSTALL) "$(srcdir)/gauche.cmake" "$(DESTDIR)/usr/share/cmake/Modules/gauche.cmake"
+
 
 # for the backward compatibility;
 # now slibcat is created in the build tree by default.

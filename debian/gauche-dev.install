@@ -1,0 +1,16 @@
+/usr/bin/gauche-config
+/usr/bin/gauche-install
+/usr/bin/gauche-package
+/usr/lib/*/gauche-0.9*/[0-9]*/include
+/usr/lib/*/gauche-0.9*/[0-9]*/*-*/gauche-config
+/usr/lib/*/gauche-0.9*/[0-9]*/*-*/gauche-install
+/usr/lib/*/gauche-0.9*/[0-9]*/*-*/gauche-package
+/usr/lib/*/libgauche-0.9*.so
+usr/lib/*/libgauche-static-0.9*.a
+/usr/share/gauche-0.9*/[0-9]*/package-templates
+/usr/share/gauche-0.9*/[0-9]*/aclocal.m4
+/usr/share/gauche-0.9*/[0-9]*/lib/precomp
+# /usr/share/gauche-0.9*/[0-9]*/lib/gencomp
+/usr/share/aclocal/gauche.m4
+usr/lib/*/gauche-*/*/*/libgauche-static-0.*.a
+/usr/share/cmake/Modules/

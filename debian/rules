@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+
+debian/control:
+	# fix the Package name
+	./replace-pg-gauche-string  debian/control.in > $@
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f configure config.sub config.guess
+	rm -f lib/gauche/config.scm
+
+override_dh_auto_configure:
+	ln -sf /usr/share/misc/config.sub .
+	ln -sf /usr/share/misc/config.guess .
+	autoconf
+#	(cd gc; autoconf; automake)
+	dh_auto_configure -- --enable-multibyte=utf-8 --enable-ipv6 \
+	--without-slib --enable-threads=pthreads
+
+# mmc: slib has to be in postinstall script! see ../lib/Makefile.in
+# For RPM ...
+#--with-slib=/usr/share/slib
+
+
+
+override_dh_build:
+ifeq ($(less_optimization_for_vm_compilation),yes)
+	(cd src; make CFLAGS="-g -O1 -fPIC" vm.o)
+endif
+	dh_auto_build
+
+
+DEB_DH_INSTALL_SOURCEDIR :=  debian/tmp
+
+# fixme: this must be done before "make install"
+# pre-install
+# slibcat-in-place
+#   dh_testroot
+#   dh_prep
+override_dh_auto_install:
+	@echo "===============   auto_install ============"
+
+override_dh_install-indep:
+	make DESTDIR=$(CURDIR)/debian/tmp install-pkg install-doc
+	dh_install
+	dh_missing --fail-missing
+
+#	chmod +x $(CURDIR)/debian/tmp/usr/share/gauche/0.9/template.DIST
