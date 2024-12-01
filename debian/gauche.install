@@ -1,4 +1,5 @@
 /usr/bin/gauche-cesconv
+/usr/bin/gauche-compile-r7rs
 /usr/bin/gosh
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/gosh
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/binary--io.so
@@ -14,7 +15,9 @@
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/gauche--termios.so
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/gauche--vport.so
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/gauche-cesconv
-/usr/lib/*/gauche-0.9[0-9]*/*/*-*/gauche--uvector.so
+/usr/lib/*/gauche-0.9[0-9]*/*/*-*/gauche-compile-r7rs
+# x86_64-pc-linux-gnu
+/usr/lib/${DEB_HOST_MULTIARCH}/gauche-0.9[0-9]*/*/*/gauche--uvector.so
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/math--mt-random.so
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/os--windows.so
 /usr/lib/*/gauche-0.9[0-9]*/*/*-*/parser--peg.so
