@@ -1,12 +1,16 @@
 gauche (0.9.15-p2-maruska) unstable; urgency=medium
 
+  * debian: adapt paths for non-installed
+  * gauche.install drop the fixed -p1
+  * adapt
+  * debian/compat
   * Correctly reference a Union struct member.
   * expanding macro...
   * my comments in cgen
   * comment on the issue of progress
   * fix aborted tests -- avoid them?
 
- -- Michal Maruska <mmaruska@gmail.com>  Sun, 01 Dec 2024 13:22:09 +0100
+ -- Michal Maruska <mmaruska@gmail.com>  Sun, 01 Dec 2024 21:46:34 +0100
 
 gauche (0.9.14-maruska3-maruska) unstable; urgency=medium
 
